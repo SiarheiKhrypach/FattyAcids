@@ -2,7 +2,6 @@ package by.tut.ssmt.app.servlets;
 
 import by.tut.ssmt.app.dao.UserData;
 import by.tut.ssmt.app.entities.User;
-import by.tut.ssmt.app.model.Model;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class RegisterServlet extends HttpServlet {
     @Override

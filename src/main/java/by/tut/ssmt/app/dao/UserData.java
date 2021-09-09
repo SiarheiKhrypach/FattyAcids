@@ -25,10 +25,6 @@ public class UserData {
         users.add(user);
     }
 
-//    public List<String> listUsers() {
-//        return (List<String>) users.stream();
-//    }
-
     public List<String> listNames() {
         return users.stream()
                 .map(User::getName)

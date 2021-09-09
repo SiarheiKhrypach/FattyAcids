@@ -11,15 +11,6 @@
 </div>
 
 <div>
-    <%
-
-        if (request.getAttribute("userName") == "correct") {
-            out.println("<p>Welcome!</p>");
-        } else {
-            out.println("<p>Password is wrong!</p>");
-        }
-
-    %>
     <div>
         <div>
             <h2>Log in</h2>
@@ -32,31 +23,11 @@
             <label>Password:
                 <input type="password" name="pass"><br />
             </label>
-            <button type="submit">Submit</button>
+<%--            <button type="submit">Submit</button>--%>
+            <button onclick="location.href='/welcome'">Submit</button>
         </form>
     </div>
 </div>
-
-
-
-<%--<div>--%>
-<%--    <div>--%>
-<%--        <div>--%>
-<%--            <h2>Users</h2>--%>
-<%--        </div>--%>
-<%--        <%--%>
-<%--            List<String> names = (List<String>) request.getAttribute("userNames");--%>
-
-<%--            if (names != null && !names.isEmpty()) {--%>
-<%--                out.println("<ui>");--%>
-<%--                for (String s : names) {--%>
-<%--                    out.println("<li>" + s + "</li>");--%>
-<%--                }--%>
-<%--                out.println("</ui>");--%>
-<%--            } else out.println("<p>There are no users yet!</p>");--%>
-<%--        %>--%>
-<%--    </div>--%>
-<%--</div>--%>
 
 <div>
     <button onclick="location.href='/'">Back to main</button>
