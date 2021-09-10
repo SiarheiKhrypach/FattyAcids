@@ -1,0 +1,15 @@
+/*P { text-align: center }*/
+/*h1 { text-align: center }*/
+/*h2 { text-align: center }*/
+.centered {
+    text-align: center;
+}
+
+.response {
+    font-size: 19px;
+    font-weight: 500;
+    color: white;
+    color: rgba(255, 255, 255, 0.95);
+    position: absolute; top: 20%; left: 45%;
+    line-height: 300%;
+}

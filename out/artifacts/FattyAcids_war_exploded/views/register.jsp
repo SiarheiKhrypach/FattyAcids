@@ -2,32 +2,36 @@
 <html>
 <head>
     <title>Add new user</title>
+    <style>
+        <%@include file='../css/fatty_acids.css' %>
+        <%@include file='../css/style.css' %>
+    </style>
 </head>
 
-<body>
-<div>
-    <h1>Registration Page</h1>
+<body class="centered">
+<div class="centered">
+    <h1 class="register-title">Registration Page</h1>
 </div>
 
 <div>
     <%
         if (request.getAttribute("userName") != null) {
-            out.println("<p>User '" + request.getAttribute("userName") + "' added!</p>");
+            out.println("<p class=\"response\">User '" + request.getAttribute("userName") + "' added!</p>");
         }
     %>
-    <div>
+    <div class="centered">
         <div>
             <h2>Add user</h2>
         </div>
 
-        <form method="post">
+        <form class="about" class="register"  method="post">
             <label>Name:
-                <input type="text" name="name"><br />
+                <input type="text" class="register-input" name="name"><br />
             </label>
             <label>Password:
-                <input type="password" name="pass"><br />
+                <input type="password" class="register-input" name="pass"><br />
             </label>
-            <button type="submit">Submit</button>
+            <button type="submit" class="register-button">Submit</button>
         </form>
     </div>
 </div>
