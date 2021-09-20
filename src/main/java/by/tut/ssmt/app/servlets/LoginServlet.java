@@ -1,6 +1,7 @@
 package by.tut.ssmt.app.servlets;
 
 import by.tut.ssmt.app.dao.UserData;
+import by.tut.ssmt.app.entities.Product;
 import by.tut.ssmt.app.entities.User;
 
 import javax.servlet.RequestDispatcher;
@@ -10,17 +11,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/login.jsp");
-        requestDispatcher.forward(req, resp);
+        req.getRequestDispatcher("views/login.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String loginName = req.getParameter("name");
         String loginPass = req.getParameter("pass");
         User user = new User(loginName, loginPass);
@@ -32,7 +34,7 @@ public class LoginServlet extends HttpServlet {
         for (int i = 0; i < names.size(); i++) {
             if (loginName.equals(names.get(i)) && loginPass.equals(passwords.get(i))) {
                 req.setAttribute("userName", loginName);
-                req.getRequestDispatcher("views/welcome.jsp").forward(req, resp);
+                req.getRequestDispatcher("/welcome").forward(req, resp);
             }
         }
 

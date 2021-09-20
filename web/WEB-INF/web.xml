@@ -26,6 +26,17 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
 
+    <!-- dao servlet -->
+    <servlet>
+        <servlet-name>dao</servlet-name>
+        <servlet-class>by.tut.ssmt.app.servlets.DaoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>dao</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>
