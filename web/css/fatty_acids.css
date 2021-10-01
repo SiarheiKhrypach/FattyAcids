@@ -13,3 +13,43 @@
     position: absolute; top: 20%; left: 45%;
     line-height: 300%;
 }
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    border-top: 5px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-collapse: collapse;
+    outline: 3px solid #ffd300;
+    font-size: 15px;
+    background: #fff!important;
+}
+.table th {
+    font-weight: bold;
+    padding: 7px;
+    background: #ffd300;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #ffd300;
+}
+.table td {
+    padding: 7px;
+    border: none;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    font-size: 15px;
+}
+.table tbody tr:nth-child(even){
+    background: #f8f8f8!important;
+}
+
+    /*label {*/
+    /*    width: 100px; !* Ширина *!*/
+    /*    text-align: right; !* Выравниваем по правому краю *!*/
+    /*    float: left; !* Выстраиваем элементы рядом *!*/
+    /*    margin-right: 10px; !* Расстояние от текста до текстового поля *!*/
+    /*    line-height: 30px; !* Выравниваем по высоте *!*/
+    /*}*/

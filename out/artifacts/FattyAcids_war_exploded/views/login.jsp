@@ -28,8 +28,8 @@
             <label>Password:
                 <input type="password" class="register-input" name="pass"><br />
             </label>
-<%--            <button type="submit">Submit</button>--%>
-            <button class="register-button" onclick="location.href='/welcome'">Submit</button>
+            <button type="submit">Submit</button>
+<%--            <button class="register-button" onclick="location.href='/welcome'">Submit</button>--%>
         </form>
     </div>
 </div>

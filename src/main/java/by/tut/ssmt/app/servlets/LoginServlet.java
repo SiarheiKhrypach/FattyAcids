@@ -15,6 +15,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class LoginServlet extends HttpServlet {
 
+    boolean passwordValidation = false;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("views/login.jsp").forward(req, resp);
@@ -31,15 +33,24 @@ public class LoginServlet extends HttpServlet {
         List<String> names = data.listNames();
         List<String> passwords = data.listPasswords();
 
-        for (int i = 0; i < names.size(); i++) {
-            if (loginName.equals(names.get(i)) && loginPass.equals(passwords.get(i))) {
-                req.setAttribute("userName", loginName);
-                req.getRequestDispatcher("/welcome").forward(req, resp);
-            }
-        }
+        req.getRequestDispatcher("/welcome").forward(req, resp);
 
-        req.getRequestDispatcher("views/decline.jsp").forward(req, resp);
-        doGet(req, resp);
+//
+//        for (int i = 0; i < names.size(); i++) {
+//            if (loginName.equals(names.get(i)) && loginPass.equals(passwords.get(i))) {
+//                passwordValidation = true;
+//                break;
+//            }
+//        }
+//
+//        if (passwordValidation == true) {
+//            req.setAttribute("userName", loginName);
+//            req.getRequestDispatcher("/welcome").forward(req, resp);
+//        } else {
+//            req.getRequestDispatcher("views/decline.jsp").forward(req, resp);
+//        }
+
+//        doGet(req, resp);
     }
 
 }
