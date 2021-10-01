@@ -1,6 +1,7 @@
 package by.tut.ssmt.app.servlets;
 
 import by.tut.ssmt.app.entities.Product;
+import sun.font.FontRunIterator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,7 @@ public class DaoServlet extends HttpServlet {
             doGet(req, resp);
         }
 
-        final String name = req.getParameter("name");
+        final String name = req.getParameter("productName");
         final String omegaThree = req.getParameter("Omega3");
         final String omegaSix = req.getParameter("Omega6");
         final String portionNumber = req.getParameter("portionNumber");
@@ -46,7 +47,7 @@ public class DaoServlet extends HttpServlet {
 
     private boolean requestIsValid(final HttpServletRequest req) {
 
-        final String name = req.getParameter("name");
+        final String name = req.getParameter("productName");
         final String omegaThree = req.getParameter("Omega3");
         final String omegaSix = req.getParameter("Omega6");
         final String portionNumber = req.getParameter("portionNumber");
