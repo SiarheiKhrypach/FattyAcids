@@ -27,10 +27,11 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Product Name</th>
+            <th>Product name</th>
             <th>Omega-3 content, mg</th>
             <th>Omega-6 content, mg</th>
             <th>Number of portions (1pt = 28g)</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -40,11 +41,27 @@
             <td><c:out value="${product.omegaThree}"/></td>
             <td><c:out value="${product.omegaSix}"/></td>
             <td><c:out value="${product.portionNumber}"/></td>
+            <td><input type="submit" name="delete" value="Удалить"/></td>
+
+<%--            <form method="post" action="<c:url value='/delete'/>">--%>
+<%--                <input type="number" hidden name="id" value="${user.id}" />--%>
+<%--                <input type="submit" name="delete" value="Удалить"/>--%>
+<%--            </form>--%>
+
+<%--            <form method="get" action="<c:url value='/update'/>">--%>
+<%--                <input type="number" hidden name="id" value="${user.id}" />--%>
+<%--                <input type="submit" value="Редактированть"/>--%>
+<%--            </form>--%>
         </tr>
         </c:forEach>
-        ...
+<%--        ...--%>
         </tbody>
     </table>
+
+<%--    <form method="post" action="<c:url value='/delete'/>">--%>
+<%--        <input type="number" hidden name="id" value="${user.id}" />--%>
+<%--        <input type="submit" name="delete" value="Удалить"/>--%>
+<%--    </form>--%>
 
 <%--    <c:forEach var="product" items="${requestScope.products}">--%>
 <%--        <ul>--%>

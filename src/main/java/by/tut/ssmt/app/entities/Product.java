@@ -2,16 +2,26 @@ package by.tut.ssmt.app.entities;
 
 public class Product {
 
+    private int id;
     private String name;
     private int omegaThree;
     private int omegaSix;
     private int portionNumber;
 
-    public Product(String name, int omegaThree, int omegaSix, int portionNumber) {
+    public Product(int id, String name, int omegaThree, int omegaSix, int portionNumber) {
+        this.id = id;
         this.name = name;
         this.omegaThree = omegaThree;
         this.omegaSix = omegaSix;
         this.portionNumber = portionNumber;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -53,6 +63,7 @@ public class Product {
 
         Product product = (Product) o;
 
+        if (id != product.id) return false;
         if (omegaThree != product.omegaThree) return false;
         if (omegaSix != product.omegaSix) return false;
         if (portionNumber != product.portionNumber) return false;
@@ -61,7 +72,8 @@ public class Product {
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + omegaThree;
         result = 31 * result + omegaSix;
         result = 31 * result + portionNumber;
@@ -71,9 +83,10 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "name='" + name + '\'' +
-                ", omegaThree='" + omegaThree + '\'' +
-                ", omegaSix='" + omegaSix + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", omegaThree=" + omegaThree +
+                ", omegaSix=" + omegaSix +
                 ", portionNumber=" + portionNumber +
                 '}';
     }

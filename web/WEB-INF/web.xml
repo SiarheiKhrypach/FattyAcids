@@ -37,6 +37,28 @@
         <url-pattern>/welcome</url-pattern>
     </servlet-mapping>
 
+    <!--Delete user-->
+    <servlet-mapping>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <servlet-class>by.tut.ssmt.app.servlets.DeleteProductServlet</servlet-class>
+    </servlet>
+
+
+    <!--Update user-->
+    <servlet-mapping>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <servlet-class>by.tut.ssmt.app.servlets.UpdateProductServlet</servlet-class>
+    </servlet>
 
 
 </web-app>

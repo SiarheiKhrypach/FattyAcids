@@ -18,8 +18,8 @@ public class DaoServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         products = new CopyOnWriteArrayList<>();
-        products.add(new Product("Olive oil", 213, 2734, 0));
-        products.add(new Product("Flax oil", 14925, 3556, 0));
+        products.add(new Product(2, "Olive oil", 213, 2734, 1));
+        products.add(new Product(3, "Flax oil", 14925, 3556, 1));
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,7 +38,7 @@ public class DaoServlet extends HttpServlet {
         final String omegaSix = req.getParameter("Omega6");
         final String portionNumber = req.getParameter("portionNumber");
 
-        final Product product = new Product(name, Integer.valueOf(omegaThree), Integer.valueOf(omegaSix), Integer.valueOf(portionNumber));
+        final Product product = new Product(products.get(products.size() - 1).getId(), name, Integer.valueOf(omegaThree), Integer.valueOf(omegaSix), Integer.valueOf(portionNumber));
 
         products.add(product);
 
