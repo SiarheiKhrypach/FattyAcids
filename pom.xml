@@ -36,6 +36,7 @@
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
+            <scope>compile</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/taglibs/standard -->
@@ -43,6 +44,15 @@
             <groupId>taglibs</groupId>
             <artifactId>standard</artifactId>
             <version>1.1.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <!-- https://mvnrepository.com/artefact/org.postgresql/postgresql -->
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.23</version>
+            <scope>compile</scope>
         </dependency>
 
 
